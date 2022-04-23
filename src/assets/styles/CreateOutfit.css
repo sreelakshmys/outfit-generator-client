@@ -88,4 +88,8 @@
   .card .card_title {
     margin-top: -80px;
   }
+
+  .gender-category {
+    margin: 32px;
+  }
 }
