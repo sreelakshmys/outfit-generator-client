@@ -1,0 +1,68 @@
+/* Font Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600&display=swap");
+
+/* CSS imports of all components */
+
+@import "Home.css";
+@import "About.css";
+@import "Contact.css";
+@import "CreateOutfit.css";
+@import "Outfits.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Ropa Sans", sans-serif;
+}
+
+.nav-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 1em 2em;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+}
+
+.nav-links {
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.route-links {
+  padding: 0.5em;
+  text-decoration: none;
+  color: black;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.route-links:hover {
+  color: grey;
+}
+
+@media (min-width: 768px) {
+  .nav-section {
+    padding: 2em;
+  }
+
+  .logo {
+    height: 60px;
+    width: 60px;
+  }
+  .route-links {
+    padding: 1em;
+    font-size: 1.1rem;
+  }
+}

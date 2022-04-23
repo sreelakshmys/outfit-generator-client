@@ -1,0 +1,152 @@
+.outfit-section {
+  min-height: 130vh;
+  background-color: rgb(251, 244, 238);
+  /* text-align: center; */
+}
+
+.country-radio-div {
+  /* width: 140px; */
+  display: flex;
+  justify-content: center;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  padding: 10px 16px;
+  margin: 16px 10px;
+  background: hsla(0, 0%, 80%, 1.14);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.radio-label:hover,
+.radio-label:focus-within {
+  background: hsla(0, 0%, 80%, 2.24);
+}
+
+.radio-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.radio-design {
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  position: relative;
+}
+
+.radio-design::before {
+  content: "";
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.radio-input:checked + .radio-design::before {
+  transform: scale(0);
+}
+
+.radio-text {
+  color: hsl(0, 0%, 60%);
+  margin-left: 14px;
+  font-size: 12px;
+  font-weight: 900;
+  transition: 0.3s;
+}
+
+.radio-input:checked ~ .radio-text {
+  color: #000000;
+}
+.target-group-heading {
+  padding-bottom: 1em;
+  letter-spacing: 4px;
+}
+.center-align {
+  text-align: center;
+}
+
+.surprise-me-button-div {
+  display: flex;
+  justify-content: center;
+}
+
+.browse-styles-button {
+  background-color: transparent;
+  border: solid 2px black;
+  color: black;
+  border-radius: 4px;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 16px;
+  margin: 24px 2px;
+  cursor: pointer;
+  width: 176px;
+}
+
+.browse-styles-button:hover {
+  background-color: black;
+  color: white;
+  border: solid 2px white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.outfit-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 12px 24px 12px;
+  padding: 24px;
+  background-color: bisque;
+  width: 500px;
+  border-radius: 1em;
+  flex-wrap: wrap;
+}
+
+.product-details {
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 22px;
+  width: 248px;
+}
+
+.product-details > h3 {
+  margin-bottom: 16px;
+}
+
+.product-detail {
+  line-height: 31px;
+}
+
+.outfit-image {
+  height: 100px;
+  width: 100px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.outfit-image:hover {
+  transform: scale(1.2);
+  /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.image-span {
+  display: flex;
+  flex-direction: column;
+}

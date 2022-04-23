@@ -1,0 +1,31 @@
+.contact-section {
+  height: 100vh;
+  background-color: rgb(251, 244, 238);
+}
+
+.contact-heading {
+  font-family: "Crimson Pro", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 54px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.contact-content {
+  text-align: center;
+  margin-top: 7em;
+}
+
+.socials {
+  height: 40px;
+  margin: 10px 10px;
+  width: 40px;
+}
+
+@media (min-width: 768px) {
+  .contact-heading {
+    font-size: 70px;
+  }
+}

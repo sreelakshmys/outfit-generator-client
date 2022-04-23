@@ -1,0 +1,64 @@
+.about-section {
+  height: 100vh;
+  background-color: rgb(251, 244, 238);
+}
+
+.about-heading {
+  font-family: "Crimson Pro", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 54px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.about-content {
+  width: 65%;
+  border: solid 2px black;
+  margin: 3em auto;
+  height: 293px;
+}
+
+.about-content > p {
+  padding: 16px;
+  line-height: 17px;
+  white-space: pre-wrap;
+  font-size: 12px;
+  text-align: justify;
+}
+
+.about-content > p > span {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .about-heading {
+    font-size: 70px;
+  }
+  .about-content {
+    height: 230px;
+  }
+
+  .about-content > p {
+    line-height: 26px;
+    padding: 18px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-heading {
+    font-size: 70px;
+  }
+
+  .about-content {
+    width: 45%;
+    margin: 4em auto;
+    height: 218px;
+  }
+
+  .about-content > p {
+    padding: 12px;
+    line-height: 24px;
+  }
+}
