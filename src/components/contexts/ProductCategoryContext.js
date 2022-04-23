@@ -17,6 +17,7 @@ const ProductCategoryContextProvider = ({ children }) => {
     setCountryCode(event.target.value);
     setIsNoDataText(false);
     setIsToaster(false);
+    setIsDataPresent(false);
   };
 
   const handleSurpriseMeButtonClick = useCallback(() => {
@@ -61,6 +62,7 @@ const ProductCategoryContextProvider = ({ children }) => {
         targetGroup: targetGroup,
         isDataPresent: isDataPresent,
         setIsDataPresent: setIsDataPresent,
+        setCountryCode: setCountryCode,
       }}
     >
       {children}
