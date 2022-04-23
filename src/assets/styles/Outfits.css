@@ -105,6 +105,8 @@
 .container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .outfit-div {
@@ -114,7 +116,7 @@
   margin: 12px 12px 24px 12px;
   padding: 24px;
   background-color: bisque;
-  width: 500px;
+  width: 92%;
   border-radius: 1em;
   flex-wrap: wrap;
 }
@@ -149,4 +151,30 @@
 .image-span {
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 375px) {
+  .outfit-div {
+    width: 82%;
+  }
+
+  .product-details {
+    width: 248px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .outfit-div {
+    width: 396px;
+  }
+
+  .product-details {
+    width: 248px;
+  }
 }
