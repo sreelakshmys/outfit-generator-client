@@ -3,13 +3,20 @@ import { Link } from "react-router-dom";
 import { ProductCategoryContext } from "../contexts/ProductCategoryContext";
 
 const Navigation = () => {
-  const { setIsDataPresent } = useContext(ProductCategoryContext);
+  const { setCountryCode, setIsDataPresent } = useContext(
+    ProductCategoryContext
+  );
+
+  const handleNavigationOnClick = () => {
+    setIsDataPresent(false);
+    setCountryCode("");
+  };
 
   return (
     <nav>
       <div className="nav-section">
         <div>
-          <Link to="/" onClick={() => setIsDataPresent(false)}>
+          <Link to="/" onClick={handleNavigationOnClick}>
             <img
               className="logo"
               src={require("../../assets/images/logo.png")}
@@ -21,21 +28,21 @@ const Navigation = () => {
           <Link
             className="route-links"
             to="/surpriseme"
-            onClick={() => setIsDataPresent(false)}
+            onClick={handleNavigationOnClick}
           >
             BROWSE STYLES
           </Link>
           <Link
             className="route-links"
             to="/about"
-            onClick={() => setIsDataPresent(false)}
+            onClick={handleNavigationOnClick}
           >
             ABOUT
           </Link>
           <Link
             className="route-links"
             to="/contact"
-            onClick={() => setIsDataPresent(false)}
+            onClick={handleNavigationOnClick}
           >
             CONTACT
           </Link>
