@@ -6,17 +6,18 @@ import { v4 as uuidv4 } from "uuid";
 const RandomOutfit = () => {
   const { products } = useContext(ProductCategoryContext);
 
+  // To get the images which are of type CUTOUT
   const getImage = (images) => {
-    const outfitImage = images.find((image) => {
+    return images.find((image) => {
       if (image?.type === "CUTOUT") {
         return image;
       } else {
         return 0;
       }
     });
-    return outfitImage;
   };
 
+  // To get the description in english
   const getDescription = (descriptions) => {
     return descriptions.find(
       (descriptionItem) => descriptionItem?.language === "EN"

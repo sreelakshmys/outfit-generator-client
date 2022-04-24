@@ -5,6 +5,7 @@ import { ProductCategoryContext } from "../contexts/ProductCategoryContext";
 const OutfitForWomen = () => {
   const { setTargetGroup } = useContext(ProductCategoryContext);
 
+  // to set the target group upon page refresh on /aurpriseme/women route
   useEffect(() => {
     setTargetGroup("FEMALE");
   }, []);
