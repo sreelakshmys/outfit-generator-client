@@ -13,6 +13,7 @@ const ProductCategoryContextProvider = ({ children }) => {
   const [isDataPresent, setIsDataPresent] = useState(false);
   const [isToaster, setIsToaster] = useState(false);
 
+  // Actions to be performed when country code is selected
   const handleCountryOptionChange = (event) => {
     setCountryCode(event.target.value);
     setIsNoDataText(false);
@@ -20,8 +21,11 @@ const ProductCategoryContextProvider = ({ children }) => {
     setIsDataPresent(false);
   };
 
+  // Method to handle surpriseme button click and fetch the data if all required params are present
   const handleSurpriseMeButtonClick = useCallback(() => {
     setIsDataPresent(false);
+
+    // Base URL of the api
     const URL = process.env.REACT_APP_HOST;
 
     async function getproducts() {
@@ -30,13 +34,13 @@ const ProductCategoryContextProvider = ({ children }) => {
       } else {
         setIsToaster(false);
       }
+
       try {
         const apiData = await fetch(`${URL}/${targetGroup}/${countryCode}`);
         if (apiData.ok) {
           setIsNoDataText(false);
           const jsonData = await apiData.json();
           setProducts(jsonData);
-          console.log(jsonData);
           setIsDataPresent(true);
         } else {
           setIsNoDataText(true);

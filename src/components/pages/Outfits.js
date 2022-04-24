@@ -6,7 +6,7 @@ import Navigation from "../parts/Navigation";
 import RandomOutfit from "./RandomOutfit";
 
 const Outfits = () => {
-  const isMounted = useRef(false);
+  // To configure toaster, based in docs of the npm package
   const toastId = useRef(null);
 
   const {
@@ -17,23 +17,21 @@ const Outfits = () => {
     isToaster,
     targetGroup,
     isDataPresent,
+    gender,
   } = useContext(ProductCategoryContext);
 
+  // useEffect to display the toaster when country is not selected
   useEffect(() => {
-    if (isMounted.current) {
-      const notify = () => {
-        if (isToaster) {
-          toastId.current = toast.error("Please select the country!", {
-            theme: "dark",
-          });
-        } else {
-          toast.dismiss(toastId.current);
-        }
-      };
-      notify();
-    } else {
-      isMounted.current = true;
-    }
+    const notify = () => {
+      if (isToaster) {
+        toastId.current = toast.error("Please select the country!", {
+          theme: "dark",
+        });
+      } else {
+        toast.dismiss(toastId.current);
+      }
+    };
+    notify();
   }, [isToaster]);
 
   return (
