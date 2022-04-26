@@ -19,9 +19,14 @@ const RandomOutfit = () => {
 
   // To get the description in english
   const getDescription = (descriptions) => {
-    return descriptions.find(
+    const outiftDescription = descriptions.find(
       (descriptionItem) => descriptionItem?.language === "EN"
     );
+    if (outiftDescription) {
+      return outiftDescription;
+    } else {
+      return descriptions[0];
+    }
   };
 
   return (
