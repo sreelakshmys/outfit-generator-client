@@ -71,7 +71,7 @@ const RandomOutfit = () => {
               ) : (
                 <></>
               )}
-              {item?.underWear?.length > 0 ? (
+              {item?.underWear?.length > 1 ? (
                 <img
                   className="outfit-image"
                   src={`https://api.newyorker.de/csp/images/image/public/${
